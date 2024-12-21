@@ -1,41 +1,71 @@
-.rectangle{
-  width: 100px;
-  height: 150px;
+/* General styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
-.bluish{
-  background-color: yellow;
+
+.container {
+  text-align: center;
 }
-.violitish{
-  background-color: #d40707;
+
+.main-title {
+  font-size: 2rem;
+  padding: 20px;
 }
-@media screen and (max-width: 600px) {
-  body {
-      background-color: rgb(70, 150, 17);
-  }
-  h1{
-    color: #d40707;
-  }
+
+/* Layout for images */
+section {
+  padding: 20px;
 }
-@media screen and (min-width: 601px) and (max-width:800px){
-  body {
-      background-color: rgb(156, 88, 103);
-  }
-  h1{
-    color: azure;
-  }
-  .wrapper{
-    display: flex;
+
+.image-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.image-box {
+  flex: 1;
+  max-width: 400px;
+}
+
+.image-box img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.image-box img:hover {
+  transform: scale(1.05);
+}
+
+/* Media Queries for responsive design */
+@media (min-width: 601px) {
+  .image-container {
+    flex-direction: column;
+    align-items: center;
   }
 
+  /* Change background color for screens smaller than 768px */
+  body {
+    background-color: #13e77d;
   }
-@media(min-width:801px){
-  body{
-    background-color: blue;
+}
+
+@media (max-width: 600px) {
+  .main-title {
+    font-size: 1.5rem;
   }
-  h1{
-    color: rgb(156, 102, 31);
+
+  /* Change background color for screens smaller than 480px */
+  body {
+    background-color: #361572;
   }
-  .wrapper{
-    display: flex;
+
+  .image-box img {
+    border-radius: 4px;
   }
 }
